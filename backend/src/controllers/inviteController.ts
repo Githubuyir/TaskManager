@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import crypto from 'crypto';
+import crypto from 'node:crypto';
 import Invite from '../models/Invite';
 import User from '../models/User';
 import Workspace from '../models/Workspace';

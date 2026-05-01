@@ -1,6 +1,14 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import crypto from 'node:crypto';
+
+// Polyfill global crypto for libraries that expect it (e.g., in Node < 19)
+if (typeof globalThis.crypto === 'undefined') {
+  (globalThis as any).crypto = crypto;
+}
+
 dotenv.config();
+
 // Force restart to pick up new env vars
 import cors from 'cors';
 import { connectDB } from './config/db';

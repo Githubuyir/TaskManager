@@ -252,12 +252,10 @@ const RemoveConfirmModal = ({
 
 // ─── Row Action Dropdown ────────────────────────────────────────────────────────
 const ActionDropdown = ({
-  member,
   onViewProfile,
   onChangeRole,
   onRemove,
 }: {
-  member: Member;
   onViewProfile: () => void;
   onChangeRole: () => void;
   onRemove: () => void;
@@ -547,7 +545,6 @@ const AdminTeam = () => {
                           </span>
                         ) : (
                           <ActionDropdown
-                            member={member}
                             onViewProfile={() => setProfileMember(member)}
                             onChangeRole={() => setChangeRoleMember(member)}
                             onRemove={() => setRemoveMember(member)}
